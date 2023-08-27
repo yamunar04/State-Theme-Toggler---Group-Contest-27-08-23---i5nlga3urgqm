@@ -2,8 +2,14 @@ import React, { useState } from "react";
 import "../styles/App.css";
 
 export default function App() {
+
+    const [theme, setTheme] = useState("light");
+
+  const toggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
     return (
-        <div className="App">
+        <div className={`App ${theme}`}>
             <h1>Newton School</h1>
             <div>
                 <form>
